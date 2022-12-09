@@ -1,0 +1,5 @@
+{
+  "serverPort": 5000,
+  "dbUrl": "mongodb+srv://Admin:Admin@instagramcluster.ysw5znw.mongodb.net/?retryWrites=true&w=majority",
+  "secretKey": "instagram"
+}
