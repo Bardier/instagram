@@ -87,9 +87,6 @@ router.post("/login", async (req, res) => {
         name: user.name,
         email: user.email,
         avatar: user.avatar,
-        // followers: user.followers,
-        // posts: user.posts,
-        // likedPosts: user.likedPosts,
       },
     });
   } catch (e) {
