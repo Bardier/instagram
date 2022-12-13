@@ -1,0 +1,30 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &__content {
+    background-color: lightgray;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid lightgray;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__close {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+}

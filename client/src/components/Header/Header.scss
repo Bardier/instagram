@@ -1,0 +1,25 @@
+.header {
+  padding-top: 30px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__btn-wrapper {
+    & button {
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    & button:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

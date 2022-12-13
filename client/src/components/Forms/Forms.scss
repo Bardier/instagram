@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__spinner {
+    width: 15px;
+  }
+}
