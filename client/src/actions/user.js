@@ -1,17 +1,9 @@
-import axios from "axios";
-
-export const registration = async (email, password) => {
-  try {
-    const response = await axios.post(
-      "http://localhost:5000/api/auth/registration",
-      {
-        email,
-        password,
-      }
-    );
-
-    alert(response.data.message);
-  } catch (e) {
-    alert(e.response.data.message);
-  }
+export const authorization = async (action, data) => {
+  return await fetch(`http://localhost:5000/api/auth/${action}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((response) => response.json());
 };

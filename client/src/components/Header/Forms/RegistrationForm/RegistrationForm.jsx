@@ -1,7 +1,8 @@
 import "../Forms.scss";
 
-import Spinner from "../../../assets/img/spinning-loading.gif";
+import Spinner from "../../../../assets/img/spinning-loading.gif";
 import { useState } from "react";
+import { authorization } from "../../../../actions/user";
 
 const RegistrationForm = ({ onCloseModal }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,18 +29,12 @@ const RegistrationForm = ({ onCloseModal }) => {
       followers: [],
     };
 
-    fetch("http://localhost:5000/api/auth/registration", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-      .then((response) => {
-        setIsLoading(false);
-        return response.json();
-      })
-      .then((data) => alert(data.message));
+    authorization("registration", newUser).then((data) => {
+      setIsLoading(false);
+      alert(data.message);
+
+      onCloseModal();
+    });
   };
 
   return (

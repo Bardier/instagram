@@ -61,6 +61,7 @@ router.post(
 // * логин пользователя
 // * ------------------------------------------------------------
 router.post("/login", async (req, res) => {
+  console.log(123);
   try {
     const { email, password } = req.body;
 
